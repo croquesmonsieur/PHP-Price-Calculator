@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 class Customer extends DataBase
 {
-    private int $customerID;
+    private int $ID;
     private string $firstName;
     private string $lastName;
     private int $groupID;
@@ -13,7 +13,7 @@ class Customer extends DataBase
 
     public function __construct(int $id , $firstName, $lastName, $groupID, $fixedDiscount, $variableDiscount)
     {
-        $this->customerID = $id;
+        $this->ID = $id;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->groupID = $groupID;
@@ -22,9 +22,9 @@ class Customer extends DataBase
     }
 
 
-    public function getCustomerID(): int
+    public function getID(): int
     {
-        return $this->customerID;
+        return $this->ID;
     }
 
 
