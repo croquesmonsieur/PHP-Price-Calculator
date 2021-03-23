@@ -11,11 +11,11 @@ class CustomerLoader
 
 //    private array $customerArray = [];
 
-    public static function getCustomers(): Array
+    public static function getCustomers(PDO $pdo): Array
     {
-        $DB =  new DataBase();
-        $conn = $DB->connect();
-        $stmt = $conn->query("SELECT firstname, lastname FROM customer  ORDER BY id");
+//        $DB =  new DataBase();
+//        $conn = $DB->connect();
+        $stmt = $pdo->query("SELECT firstname, lastname FROM customer  ORDER BY id");
 //        $stmt->execute();
 
         $results = $stmt->fetchAll();

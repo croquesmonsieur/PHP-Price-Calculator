@@ -12,7 +12,7 @@ public function __construct(){
 
 public function getCustomerList()
 {
-    $customers = CustomerLoader::getCustomers();
+    $customers = CustomerLoader::getCustomers($this->pdo);
 }
 
 }
