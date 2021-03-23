@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-class Customer extends DataBase
+class Customer
 {
     private int $ID;
     private string $firstName;

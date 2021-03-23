@@ -10,7 +10,9 @@ public function __construct(){
     $this->pdo = $connection->connect();
 }
 
-public function getCustomerDetails(){
-
+public function getCustomerList()
+{
+    $customers = CustomerLoader::getCustomers();
 }
+
 }

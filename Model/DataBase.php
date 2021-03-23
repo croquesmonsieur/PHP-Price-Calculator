@@ -3,7 +3,7 @@
 
 class DataBase
 {
-    private string $host ="localhost:3306";
+    private string $host ="localhost";
     private string $user = "root";
     private string $pwd ="1122";
     private string $db ="priceCRUD";
