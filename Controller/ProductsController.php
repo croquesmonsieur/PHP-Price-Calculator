@@ -14,6 +14,7 @@ class ProductsController
     public function getProductList()
     {
         $products = ProductsLoader::getProducts($this->pdo);
+        require "View/CustomerView.php";
     }
 
 }
