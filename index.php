@@ -15,9 +15,10 @@ require_once "Model/Customer.php";
 require_once "Model/Products.php";
 
 $controller = new CustomerController();
-$controller->getCustomerList();
+$controller->getViewRender();
 
-$productControl = new CustomerController();
-$productControl->getProductList();
+
+
+
 
 
