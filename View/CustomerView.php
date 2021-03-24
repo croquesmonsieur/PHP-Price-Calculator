@@ -11,9 +11,11 @@
 
     <label class="form-label" for="customer">Customer:</label>
     <select name="customer" id="customer">
+
         <?php foreach ($customers as $customer):?>
             <option value="<?php echo $customer["firstname"]?>"><?php echo $customer["firstname"]." ".$customer["lastname"]?></option>
         <?php endforeach; ?>
+
     </select>
 
     <input class="btn btn-primary ml-4" type="submit" value="Calculate" />
