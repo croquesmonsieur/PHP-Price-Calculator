@@ -20,11 +20,10 @@ class CustomerLoader
 
         $results = $stmt->fetchAll();
 
-        var_dump($results);
 
-        foreach ($results as $result ){
-            echo $result["firstname"]." ".$result["lastname"];
-        }
+//        foreach ($results as $result ){
+//             $result["firstname"]." ".$result["lastname"];
+//        }
         return $results;
     }
 
