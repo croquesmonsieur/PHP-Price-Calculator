@@ -10,14 +10,9 @@ public function __construct(){
     $this->pdo = $connection->connect();
 }
 
-    public function getCustomerList()
+    public function getViewRender()
     {
         $customers = CustomerLoader::getCustomers($this->pdo);
-        require 'View/CustomerView.php';
-    }
-
-    public function getProductList()
-    {
         $products = ProductsLoader::getProducts($this->pdo);
         require 'View/CustomerView.php';
     }

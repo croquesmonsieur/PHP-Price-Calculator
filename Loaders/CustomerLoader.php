@@ -14,17 +14,19 @@ class CustomerLoader
     public static function getCustomers(PDO $pdo): Array
     {
 
-        $stmt = $pdo->query("SELECT firstname, lastname FROM customer ORDER BY id");
-        $results = $stmt->fetchAll();
-        //var_dump($results);
-        foreach ($results as $result ){
-            echo $result["firstname"]." ".$result["lastname"];
+        $stmt = $pdo->query("SELECT * FROM customer ORDER BY id");
+        $customersList = $stmt->fetchAll();
+
+        $customers_obj_list = [];
+        foreach ($customersList as $customer){
+            $customers_obj_list[] = new Customer((int)$customer['id'], $customer['firstname'], $customer['lastname'], (int)$customer['group_id'], (int)$customer['fixed_discount'], (int)$customer['variable_discount']);
         }
-        return $results;
+        return $customers_obj_list;
     }
-
-    public static function getCustomerDiscount(PDO $pdo){
-        $stmt = $pdo->prepare("SELECT c2.name FROM customer_group c2 LEFT JOIN customer c on c2.group_id = c.");
+/*
+    public static function getCustomerDiscount(PDO $pdo, $id){
+        $stmt = $pdo->prepare("SELECT c.firstname, c.lastname FROM customer c left JOIN customer_group cg on c.group_id = cg.parent_id where ISNULL(cg.name) and c.id =:id");
+        $result = $stmt->bindValue(':id',  );
     }
-
+*/
 }

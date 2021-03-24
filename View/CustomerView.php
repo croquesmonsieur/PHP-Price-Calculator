@@ -35,13 +35,13 @@
     <label class="form-label" for="product">Product:</label>
     <select name="product" id="product">
         <?php foreach ($products as $product): ?>
-            <option value="<?php echo $product['name'] ?>"><?php echo $product['name'] ?></option>
+            <option value="<?php echo $product->getID() ?>"><?php echo $product->getName() . " " . "€" . ($product->getPrice() /100) ?></option>
         <?php endforeach; ?>
     </select>
     <label class="form-label" for="customer">Customer:</label>
     <select name="product" id="product">
         <?php foreach ($customers as $customer): ?>
-            <option value="<?php echo $customer['firstname'] ?>"><?php echo $customer['firstname'] ?></option>
+            <option value="<?php echo $customer->getID() ?>"><?php echo $customer->getFirstName() . " " . $customer->getLastName() ?></option>
         <?php endforeach; ?>
     </select>
     <br>
