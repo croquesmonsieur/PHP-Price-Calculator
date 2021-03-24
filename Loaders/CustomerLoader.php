@@ -9,6 +9,8 @@ require_once  "Model/DataBase.php";
 class CustomerLoader
 {
 
+//    private array $customerArray = [];
+
     public static function getCustomers(PDO $pdo): Array
     {
 

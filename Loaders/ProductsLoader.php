@@ -9,11 +9,10 @@ class ProductsLoader
         $productList = $stmt->fetchAll();
         return $productList;
     }
-}
 
-/*
+
+}/*
 $product_items = [];
         foreach ($productList as $product){
             $product_items[] = new Products((int)$product['id'], $product['name'], (int)$product['price']);
         }
-*/
