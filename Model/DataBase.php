@@ -4,9 +4,9 @@
 class DataBase
 {
     private string $host ="localhost";
-    private string $user = "root";
-    private string $pwd ="1122";
-    private string $db ="priceCRUD";
+    private string $user = "becode";
+    private string $pwd ="becode123";
+    private string $db ="priceCalc";
     private array $driverOpt= [
         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
