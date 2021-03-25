@@ -33,18 +33,19 @@
 <h2>Choose your product</h2>
 <form method="post">
     <label class="form-label" for="product">Product:</label>
-    <select name="product" id="product">
+    <select name="product_detail">
         <?php foreach ($products as $product): ?>
             <option value="<?php echo $product->getID() ?>"><?php echo $product->getName() . " " . "€" . ($product->getPrice() /100) ?></option>
         <?php endforeach; ?>
     </select>
     <label class="form-label" for="customer">Customer:</label>
-    <select name="product" id="product">
+    <select name="customer_detail">
         <?php foreach ($customers as $customer): ?>
             <option value="<?php echo $customer->getID() ?>"><?php echo $customer->getFirstName() . " " . $customer->getLastName() ?></option>
         <?php endforeach; ?>
     </select>
     <br>
-    <input type="submit" value="Calculate"/>
+    <input type="submit" name="calculate_button" value="Calculate"/>
 </form>
+<p>Customer discount: <?php $client_discount?> </p>
 </body>

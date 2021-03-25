@@ -14,6 +14,10 @@ public function __construct(){
     {
         $customers = CustomerLoader::getCustomers($this->pdo);
         $products = ProductsLoader::getProducts($this->pdo);
+        //$allGroups = CustomerGroupLoader::getAllCustomerGroups($this->pdo);
+        //$Groups = CustomerGroupLoader::getGroups($this->pdo);
+        $discounts = CustomerLoader::getCustomerDiscount($this->pdo);
+        //$groups_discount = CustomerGroupLoader::getGroupDiscountPerCustomer($this->pdo);
         require 'View/CustomerView.php';
     }
 
